@@ -63,6 +63,9 @@ Required attributes:
 - lastName → user.lastName
 
 📸 Screenshot:
+
+![SAML Attributes](images/okta-saml-attributes.png)
+
 `images/okta-saml-attributes.png`
 
 ---
