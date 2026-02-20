@@ -46,7 +46,8 @@ AWS → IAM Identity Center → Settings → Automatic Provisioning
 SCIM disabled to ensure users are not pre-provisioned.
 
 📸 Screenshot:
-`images/scim-disabled.png`
+
+![SCIM Disabled](images/scim-disabled.png)
 
 ---
 
