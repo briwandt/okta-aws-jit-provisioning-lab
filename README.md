@@ -80,3 +80,95 @@ Confirmed test user is not present prior to login.
 ### 4️⃣ Perform SP-Initiated Login
 
 Used AWS Access Portal URL:
+
+https://d-906600b513.awsapps.com/start
+
+User authenticated via Okta.
+
+---
+
+### 5️⃣ Validate JIT Creation in AWS
+
+After login:
+
+AWS → IAM Identity Center → Users
+
+User now exists and shows:
+
+- Created by: External identity provider
+- Status: Enabled
+- Timestamp matches login time
+
+📸 Screenshot:
+`images/aws-user-created-jit.png`
+
+---
+
+### 6️⃣ Validate Permission Assignment
+
+Confirmed user received expected AWS Permission Set via group mapping.
+
+📸 Screenshot:
+`images/validation-portal-role.png`
+
+---
+
+## Evidence from Logs
+
+### Okta System Log
+
+Verified SAML assertion event containing identity attributes.
+
+📸 Screenshot:
+`images/okta-systemlog-saml-assertion.png`
+
+---
+
+### AWS CloudTrail
+
+Verified `AssumeRoleWithSAML` event for the test user.
+
+📸 Screenshot:
+`images/aws-assumerole-saml.png`
+
+---
+
+## Security Concepts Demonstrated
+
+- Federation-driven identity instantiation
+- Attribute-based identity creation
+- SAML NameID dependency
+- SP-initiated authentication flow
+- Reduced pre-provisioned account footprint
+- JIT onboarding model
+- Identity lifecycle comparison (SCIM vs JIT)
+
+---
+
+## Lessons Learned
+
+- JIT requires accurate SAML attribute mapping
+- SCIM must be disabled (or controlled) to demonstrate pure JIT
+- SP-initiated login ensures correct evaluation order
+- System Log is essential for debugging SAML assertions
+- IAM Identity Center does not create users unless valid attributes are present
+
+---
+
+## Outcome
+
+Successfully demonstrated:
+
+- AWS user creation at first login via SAML
+- Correct identity attribute mapping
+- Automatic permission set application
+- Validation through logs and console evidence
+
+This lab showcases advanced identity federation and provisioning design concepts used in enterprise IAM environments.
+
+---
+
+## Author
+
+Brianna Wandt  
+Identity & Access Management Portfolio Lab
