@@ -66,7 +66,6 @@ Required attributes:
 
 ![SAML Attributes](images/okta-saml-attributes.png)
 
-`images/okta-saml-attributes.png`
 
 ---
 
