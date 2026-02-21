@@ -1,8 +1,8 @@
 # 🔁 Okta → AWS Just-In-Time (JIT) Provisioning Lab
 
-## 📘 Extended Technical Write-Up:
+## 📘 Extended Technical Write-Up
 
-https://your-notion-public-link-here
+🔗 [View Full Technical Breakdown in Notion]([https://your-notion-public-link-here](https://reliable-bougon-dc6.notion.site/Okta-AWS-SAML-Federation-JIT-Provisioning-Deep-Dive-30ebb6ca187680148ffcfb11f26eb987?source=copy_link))
 
 ## Overview
 
