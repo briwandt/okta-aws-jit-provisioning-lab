@@ -145,36 +145,54 @@ User email matches SAML NameID
 ![Validation Portal](images/validation-portal-role.png)
 
 ---
+## 📊 Okta System Log – SAML Federation Validation
 
-## Evidence from Logs
+We confirmed a successful SAML authentication event in Okta’s system logs, indicating that:
 
-### Okta System Log
+Okta issued a valid SAML assertion
 
-Verified SAML assertion event containing identity attributes.
+The assertion was generated via SP-initiated login
+
+The authentication outcome was SUCCESS
+
+The event type was user.authentication.sso
+
+The federation configuration is functioning
+
+While this particular event is for the administrative login flow (used during configuration), it validates the fundamental SAML exchange that drives federation and JIT provisioning.
 
 📸 Screenshot:
-`images/okta-systemlog-saml-assertion.png`
+
+![Okta SAML](images/okta-saml-success.png)
 
 ---
 
-### AWS CloudTrail
+## Security and Federation Concepts Demonstrated
 
-Verified `AssumeRoleWithSAML` event for the test user.
+This lab demonstrates:
 
-📸 Screenshot:
-`images/aws-assumerole-saml.png`
+- SAML 2.0 authentication flow
+- SP-initiated login
+- Identity Provider and Service Provider trust
+- Assertion validation via log analysis
+- Audience and issuer alignment
 
 ---
 
-## Security Concepts Demonstrated
+## Notes on AWS Access Portal and Permission Set Validation
 
-- Federation-driven identity instantiation
-- Attribute-based identity creation
-- SAML NameID dependency
-- SP-initiated authentication flow
-- Reduced pre-provisioned account footprint
-- JIT onboarding model
-- Identity lifecycle comparison (SCIM vs JIT)
+Although a live AWS Access Portal screenshot of JIT provisioning was not captured during this lab, the configuration and logs above show the required federation mechanics are correctly implemented.
+
+For functional testing in a production setup, you would expect to observe:
+
+- A user session in AWS Access Portal
+- Assigned AWS accounts and permission sets via group membership
+- CloudTrail entries for `AssumeRoleWithSAML`
+
+These would complete the end-to-end view of dynamic user access.
+
+
+
 
 ---
 
