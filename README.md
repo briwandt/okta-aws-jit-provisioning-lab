@@ -13,6 +13,11 @@ This lab validates that:
 - Login via AWS access portal triggers SAML
 - AWS auto-creates the user from SAML attributes
 - Permission sets are applied after creation
+- SCIM provisioning is disabled
+- SAML assertion contains required attributes
+- AWS auto-creates the user on login
+- Permission sets are applied via group mapping
+- Logs confirm SSO + federation flow
 
 ---
 
@@ -149,25 +154,63 @@ Verified `AssumeRoleWithSAML` event for the test user.
 - Identity lifecycle comparison (SCIM vs JIT)
 
 ---
+🔎 Log & Security Analysis
+Okta Logs Show:
 
-## Lessons Learned
+SP-initiated SAML login
 
-- JIT requires accurate SAML attribute mapping
-- SCIM must be disabled (or controlled) to demonstrate pure JIT
-- SP-initiated login ensures correct evaluation order
-- System Log is essential for debugging SAML assertions
-- IAM Identity Center does not create users unless valid attributes are present
+Assertion issued successfully
 
----
+NameID = email format
 
-## Outcome
+Proxy detection (Cloudflare / iCloud relay)
 
-Successfully demonstrated:
+Risk level: HIGH
 
-- AWS user creation at first login via SAML
-- Correct identity attribute mapping
-- Automatic permission set application
-- Validation through logs and console evidence
+Authentication class: PasswordProtectedTransport
+
+Key Detection Engineering Insights
+
+Federation abuse detection opportunity
+
+Proxy detection in SSO flows
+
+New device + new IP behavior flags
+
+JIT provisioning creates ephemeral attack surface
+
+CloudTrail monitoring should detect AssumeRoleWithSAML
+
+SAML audience validation is critical
+
+
+🧠 Lessons Learned
+
+JIT requires exact SAML attribute mapping
+
+NameID must match expected AWS email format
+
+ACS URL and Audience URI must align perfectly
+
+Certificate mismatches break federation
+
+SP-initiated flows simplify evaluation order
+
+Identity logs are critical for troubleshooting
+
+🏁 Outcome
+
+This lab demonstrates:
+
+Federation-driven identity creation
+
+Attribute-based provisioning
+
+SAML configuration and debugging
+
+Identity flow validation through logs
+
+Security analysis of SSO risk indicators
 
 This lab showcases advanced identity federation and provisioning design concepts used in enterprise IAM environments.
 
