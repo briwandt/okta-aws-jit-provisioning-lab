@@ -76,7 +76,8 @@ AWS → IAM Identity Center → Users
 Confirmed test user is not present prior to login.
 
 📸 Screenshot:
-`images/pre-login-no-user.png`
+
+![PRE LOGIN](images/pre-login-no-user.png)
 
 ---
 
