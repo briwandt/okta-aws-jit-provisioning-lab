@@ -2,7 +2,7 @@
 
 ## 📘 Extended Technical Write-Up
 
-🔗 [View Full Technical Breakdown in Notion]([https://your-notion-public-link-here](https://reliable-bougon-dc6.notion.site/Okta-AWS-SAML-Federation-JIT-Provisioning-Deep-Dive-30ebb6ca187680148ffcfb11f26eb987?source=copy_link))
+🔗 [View Full Technical Breakdown in Notion](https://reliable-bougon-dc6.notion.site/Okta-AWS-SAML-Federation-JIT-Provisioning-Deep-Dive-30ebb6ca187680148ffcfb11f26eb987?source=copy_link)
 
 ## Overview
 
