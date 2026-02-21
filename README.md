@@ -1,5 +1,9 @@
 # 🔁 Okta → AWS Just-In-Time (JIT) Provisioning Lab
 
+## 📘 Extended Technical Write-Up:
+
+https://your-notion-public-link-here
+
 ## Overview
 
 This lab demonstrates **Just-In-Time (JIT) user provisioning** between Okta (Identity Provider) and AWS IAM Identity Center (Service Provider).
