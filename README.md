@@ -177,7 +177,8 @@ Verified `AssumeRoleWithSAML` event for the test user.
 - Identity lifecycle comparison (SCIM vs JIT)
 
 ---
-🔎 Log & Security Analysis
+
+## 🔎 Log & Security Analysis
 Okta Logs Show:
 
 SP-initiated SAML login
@@ -206,8 +207,9 @@ CloudTrail monitoring should detect AssumeRoleWithSAML
 
 SAML audience validation is critical
 
+---
 
-🧠 Lessons Learned
+## 🧠 Lessons Learned
 
 JIT requires exact SAML attribute mapping
 
@@ -220,8 +222,8 @@ Certificate mismatches break federation
 SP-initiated flows simplify evaluation order
 
 Identity logs are critical for troubleshooting
-
-🏁 Outcome
+---
+## 🏁 Outcome
 
 This lab demonstrates:
 
