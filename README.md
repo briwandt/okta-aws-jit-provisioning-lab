@@ -114,12 +114,35 @@ User now exists and shows:
 
 ---
 
-### 6️⃣ Validate Permission Assignment
+### 6️⃣ Federated Access Validation (Permission Assignment Confirmed)
 
-Confirmed user received expected AWS Permission Set via group mapping.
+After successful SAML authentication, the user was presented with an AWS account and assigned permission set.
+
+This confirms:
+
+Okta authentication succeeded
+
+AWS IAM Identity Center trusted the SAML assertion
+
+The user identity matched
+
+Group-to-permission-set mapping was applied
+
+The user received federated AWS access
+
+The following screenshot shows:
+
+AWS Access Portal
+
+Assigned AWS Account
+
+Permission Set: ReadOnlyAccess
+
+User email matches SAML NameID
 
 📸 Screenshot:
-`images/validation-portal-role.png`
+
+![Validation Portal](images/validation-portal-role.png)
 
 ---
 
