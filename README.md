@@ -103,7 +103,8 @@ User now exists and shows:
 - Timestamp matches login time
 
 📸 Screenshot:
-`images/aws-user-created-jit.png`
+
+![JIT](images/aws-user-created-jit.png)
 
 ---
 
